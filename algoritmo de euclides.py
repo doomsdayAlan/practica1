@@ -1,5 +1,5 @@
 def xgcd(a, b):
-    """Calcula el greater common divisor (gcd)/ máximo común divisor de a y b.
+    """(gcd)máximo común divisor de a y b.
         Utiliza el algoritmo extendido de Euclides.
     Args:
         a: mcd(a,b)=resultado
@@ -27,3 +27,9 @@ def xgcd(a, b):
         v0 = v1
         v1 = v
     return  a, u0, v0
+print(xgcd(393,267))
+print("ingrese los valores aceptables para n,a, y b")
+n=input("Dígame una cantidad para n: ")
+a=input("Dígame una cantidad para a: ")
+b=input("Dígame una cantidad para b: ")
+print(n,a,b)
