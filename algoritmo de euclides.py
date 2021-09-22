@@ -5,4 +5,4 @@ for desen in palabras:
     print(desen%27)
 print("lista ")
 for desen in palabras:
-    print(desen
+    print(desen)
