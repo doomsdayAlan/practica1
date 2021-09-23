@@ -26,7 +26,8 @@ def xgcd(a, b):
         u1 = u
         v0 = v1
         v1 = v
-    return  a, u0, v0
+    '''return  a, u0, v0'''
+    return  a
 
 def mcd_recur(a,b):
     if b == 0:
@@ -35,15 +36,16 @@ def mcd_recur(a,b):
 
 print("ingrese los valores aceptables para n,a, y b")
 n=int(input("Dígame una cantidad para n: "))
-a=int(input('D'"Dígame una cantidad para a: "))
-b=int(input('D'"Dígame una cantidad para : "))
+a=int(input("Dígame una cantidad para a: "))
+b=int(input("Dígame una cantidad para : "))
 print(n,a,b)
 
-print(mcd_recur(a,n))
+
 if mcd_recur(a,n)==1:
     print(mcd_recur(a,n))
     print("es valido ")
     print(n,a,b)
 else:
+    print(mcd_recur(a,n))
     print("no es valido, ingrese otro valor")
     print(n,a,b)
