@@ -1,3 +1,4 @@
+import math
 def xgcd(a, b):
     """(gcd)máximo común divisor de a y b.
         Utiliza el algoritmo extendido de Euclides.
@@ -26,26 +27,40 @@ def xgcd(a, b):
         u1 = u
         v0 = v1
         v1 = v
-    '''return  a, u0, v0'''
-    return  a
-
-def mcd_recur(a,b):
-    if b == 0:
-        return a
-    return mcd_recur(b, a % b)
+    return  a, u0, v0
+print(xgcd(393,267))
 
 print("ingrese los valores aceptables para n,a, y b")
 n=int(input("Dígame una cantidad para n: "))
 a=int(input("Dígame una cantidad para a: "))
-b=int(input("Dígame una cantidad para : "))
+b=int(input("Dígame una cantidad para b: "))
 print(n,a,b)
 
+def modinv(a, m):
+    g, x, y = egcd(a, m)
+    if g != 1:
+        raise Exception('modular inverse does not exist')
+    else:
+        return x % m
 
-if mcd_recur(a,n)==1:
-    print(mcd_recur(a,n))
-    print("es valido ")
-    print(n,a,b)
-else:
-    print(mcd_recur(a,n))
-    print("no es valido, ingrese otro valor")
-    print(n,a,b)
+
+
+if b < n and b >=0 :
+    print ("Betha es valido")
+else: 
+    print ("Betha se encuentra fuera de rango")
+
+if (math.gcd(a,n)==1):
+    print("alfa es valido")
+    print(xgcd(a,n))
+    Ek = (a + b) % n
+    Dk = ((a - 1 ) * (-b)) % n
+    print (Ek)
+    print (Dk)
+else: 
+    print("Warning: Introduzca un valor de alpha valido") 
+    a = int(input("Dígame una cantidad para a: ")) 
+
+
+
+
